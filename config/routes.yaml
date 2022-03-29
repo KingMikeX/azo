@@ -1,0 +1,54 @@
+#index:
+#    path: /
+#    controller: App\Controller\HomeController::index
+
+#get_user_information:
+#    path: /api/user/information
+#    controller: App\Controller\UserController::getUserInformation
+#
+#get_user_information:
+#    path: /api/user/information
+#    controller: App\Controller\UserController::getUserInformation
+
+
+###################################################
+##
+##        Nelmio - Dashboard
+##
+app.swagger_ui:
+  path: /api/doc
+  methods:  GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger:
+  path: /api/doc.json
+  methods:  GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger }
+###################################################
+##
+##        Api - Controller
+##
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+###################################################
+##
+##        Render - View
+##
+home:
+  path: /home
+  controller: App\Controller\HomeController::index
+
+register.view:
+  path: /register
+  controller: App\Controller\RegisterController::index
+
+###################################################
+##
+##        Backend - Controller
+##
+api.register:
+  path: /api/register
+  controller: App\Controller\RegisterController::register
+  methods: POST
+

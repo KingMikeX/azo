@@ -1,0 +1,9 @@
+fos_rest:
+  param_fetcher_listener: true
+  body_listener: true
+  format_listener:
+    enabled: true
+    rules:
+  versioning: true
+  view:
+    view_response_listener: 'force'
